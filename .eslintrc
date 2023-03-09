@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-console": 2,
+    "no-multi-spaces": 2,
+    "no-trailing-spaces": 2,
+    "curly": 2,
+    "max-line-length": [0, 100],
+    "max-classes-per-file": 0,
+    "no-bitwise": 2,
+    "no-debugger": 2,
+    "no-empty": 2,
+    "no-eval": 2,
+    "prefer-const": 2,
+    "radix": 2,
+    "default-case": 2,
+    "camelcase": ["error"]
+  }
+}
