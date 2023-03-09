@@ -10,7 +10,8 @@
     "build": "webpack --config webpack.prod.js",
     "prereq": "lint-staged",
     "lint": "eslint ./src --ext .ts,.js,.tsx,.jsx",
-    "lint:fix": "eslint ./src --ext .ts,.js,.tsx,.jsx --fix"
+    "lint:fix": "eslint ./src --ext .ts,.js,.tsx,.jsx --fix",
+    "postinstall": "npx husky install"
   },
   "commitlint": {
     "extends": [
@@ -19,12 +20,11 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "npm run prereq"
     }
   },
   "lint-staged": {
-    "*.ts": "eslint"
+    "*{.ts,.tsx}": "eslint"
   },
   "author": "",
   "license": "ISC",
